@@ -1,6 +1,6 @@
 'use client';
 
-import BgImg from '@/assets/img-hero-2x.jpg';
+import BgImg from '@/assets/Img-hero-2x.jpg';
 import ButtonLinks from '../UI/ButtonLinks';
 import ButtonLink from '../UI/ButtonLink';
 import Image from 'next/image';
