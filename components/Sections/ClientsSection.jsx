@@ -4,7 +4,11 @@ import Image from 'next/image';
 import { getClients } from '@/lib/http';
 import { motion } from 'motion/react';
 
-export default function ClientsSection() {
+export default function ClientsSection({ show = true }) {
+  if (!show) {
+    return;
+  }
+
   const clients = getClients();
 
   return (

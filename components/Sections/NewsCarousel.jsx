@@ -21,7 +21,7 @@ export default function NewsCarousel({ news }) {
   }
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
+    loop: false,
     align: 'start',
     slidesToScroll: 1,
     breakpoints: {

@@ -36,7 +36,7 @@ export default function ProductsFeaturesSection({ features }) {
               >
                 <h3 className="block-title">{feature.title}</h3>
                 <p
-                  className="block-text"
+                  className="block-title-caption"
                   dangerouslySetInnerHTML={{ __html: feature.text }}
                 ></p>
                 <ul className="block-list">

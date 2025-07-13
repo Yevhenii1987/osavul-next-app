@@ -36,7 +36,7 @@ export default function AwardsSection({ awardsData }) {
               clients include:
             </motion.p>
           </div>
-          <div className="awards-wrap flex max-md:flex-col">
+          <div className="awards-wrap w-full flex justify-center max-md:flex-col">
             {awards.map((item) => (
               <motion.div
                 key={item.name}

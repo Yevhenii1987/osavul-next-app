@@ -36,6 +36,7 @@ export default function AboutTextBlock() {
           </motion.p>
         </div>
       </section>
+      <div className="sections-divider"></div>
       <section className="section about-text-block">
         <div className="container block-border flex justify-between max-md:flex-col">
           <motion.h2

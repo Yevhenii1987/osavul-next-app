@@ -52,7 +52,7 @@ export default function ProductsSection({ products }) {
               >
                 <h3 className="block-title">{prod.title}</h3>
                 <p
-                  className="block-text"
+                  className="block-title-caption"
                   dangerouslySetInnerHTML={{ __html: prod.text }}
                 ></p>
                 <ul className="block-list">
