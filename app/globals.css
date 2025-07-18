@@ -1129,9 +1129,9 @@ ul {
   background: #f1f5f7 url('/images/arr-1.svg') center no-repeat;
 }
 
-.slider-button:hover {
+/* .slider-button:hover {
   background: #03001c url('/images/arr-2.svg') center no-repeat;
-}
+} */
 
 .slider-button.active {
   background: #03001c url('/images/arr-2.svg') center no-repeat;

@@ -3,10 +3,12 @@
 import Image from 'next/image';
 import ClassNames from 'embla-carousel-class-names';
 import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import Link from 'next/link';
 
 export default function CasesCarousel({ cases }) {
+  const [isPrev, setIsPrev] = useState(false);
+  const [isNext, setIsNext] = useState(true);
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       align: 'start',
@@ -16,22 +18,30 @@ export default function CasesCarousel({ cases }) {
   );
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
+    if (emblaApi) {
+      emblaApi.scrollPrev();
+    }
+    setIsPrev(emblaApi.canScrollPrev());
+    setIsNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
+    if (emblaApi) {
+      emblaApi.scrollNext();
+    }
+    setIsPrev(emblaApi.canScrollPrev());
+    setIsNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   return (
     <>
       <div className="slider-buttons">
         <button
-          className="slider-button slider-button--prev embla__prev"
+          className={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
           onClick={scrollPrev}
         ></button>
         <button
-          className="slider-button slider-button--next embla__next"
+          className={`${isNext && 'active'} slider-button slider-button--next embla__next`}
           onClick={scrollNext}
         ></button>
       </div>

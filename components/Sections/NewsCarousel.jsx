@@ -10,6 +10,8 @@ export default function NewsCarousel({ news }) {
   const [newsArr, setNewsArr] = useState(news);
   const [newsTab, setNewsTab] = useState('all');
   const [isPending, setIsPending] = useState(false);
+  const [isPrev, setIsPrev] = useState(false);
+  const [isNext, setIsNext] = useState(true);
 
   async function handleTabClick(e) {
     setNewsTab(e.target.value);
@@ -30,11 +32,19 @@ export default function NewsCarousel({ news }) {
   });
 
   const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
+    if (emblaApi) {
+      emblaApi.scrollPrev();
+    }
+    setIsPrev(emblaApi.canScrollPrev());
+    setIsNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
+    if (emblaApi) {
+      emblaApi.scrollNext();
+    }
+    setIsPrev(emblaApi.canScrollPrev());
+    setIsNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   return (
@@ -72,11 +82,11 @@ export default function NewsCarousel({ news }) {
         </div>
         <div className="slider-buttons max-md:hidden">
           <button
-            className="slider-button slider-button--prev embla__prev"
+            className={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
             onClick={scrollPrev}
           ></button>
           <button
-            className="slider-button slider-button--next embla__next"
+            className={`${isNext && 'active'} slider-button slider-button--next embla__next`}
             onClick={scrollNext}
           ></button>
         </div>
