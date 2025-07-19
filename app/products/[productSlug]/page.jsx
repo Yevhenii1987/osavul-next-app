@@ -77,14 +77,22 @@ export default async function ProductPage({ params }) {
                 href={`/products/${prevProduct.slug}`}
                 className="btn btn--prev"
               >
-                <Image src={arrow} alt=" " />
+                {/* <Image src={arrow} alt=" " /> */}
+                <svg className="svg-arrow-box" width="92" height="64" viewBox="0 0 92 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path className="svg-arrow" d="M47 24L55 32L47 40" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
+                  <path className="svg-arrow--sm" d="M39 29L42 32L39 35" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
+                </svg>
               </Link>
               <h2 className="page-title flex text-center">{product.title}</h2>
               <Link
                 href={`/products/${nextProduct.slug}`}
                 className="btn btn--next"
               >
-                <Image src={arrow} alt=" " />
+                {/* <Image src={arrow} alt=" " /> */}
+                <svg className="svg-arrow-btn" width="92" height="64" viewBox="0 0 92 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path className="svg-arrow" d="M47 24L55 32L47 40" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
+                  <path className="svg-arrow--sm" d="M39 29L42 32L39 35" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
+                </svg>
               </Link>
               <Link href={`/products/${nextProduct.slug}`}>
                 {nextProduct.title}

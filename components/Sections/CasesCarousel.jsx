@@ -5,6 +5,7 @@ import ClassNames from 'embla-carousel-class-names';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useState } from 'react';
 import Link from 'next/link';
+import ButtonArrow from '../UI/ButtonArrow';
 
 export default function CasesCarousel({ cases }) {
   const [isPrev, setIsPrev] = useState(false);
@@ -44,6 +45,14 @@ export default function CasesCarousel({ cases }) {
           className={`${isNext && 'active'} slider-button slider-button--next embla__next`}
           onClick={scrollNext}
         ></button>
+        {/* <ButtonArrow
+          classes={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
+          onClick={scrollPrev}
+        ></ButtonArrow>
+        <ButtonArrow
+          classes={`${isNext && 'active'} slider-button slider-button--next embla__next`}
+          onClick={scrollNext}
+        ></ButtonArrow> */}
       </div>
 
       <div className="embla" ref={emblaRef}>
