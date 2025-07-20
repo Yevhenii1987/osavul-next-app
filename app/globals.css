@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  padding-top: 7.2rem;
   margin: 0;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -52,6 +53,10 @@ body {
 @media (max-width: 1023px) {
   html {
     font-size: 10px;
+  }
+
+  body {
+    padding-top: 5rem;
   }
 }
 
@@ -276,7 +281,13 @@ ul {
 }
 
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.2rem;
   background: #fff;
+  z-index: 10;
 }
 
 .main-header-ctn {
@@ -293,6 +304,10 @@ ul {
 }
 
 @media (max-width: 1023px) {
+  .main-header {
+    height: 5rem;
+  }
+
   .main-header-ctn {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -334,7 +349,11 @@ ul {
 }
 
 .button-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 1.5rem 4.8rem;
+  height: 5rem;
   font-weight: 600;
   font-size: 14px;
   line-height: 143%;
@@ -2202,6 +2221,18 @@ ul {
   }
 }
 
+.case-page {
+  overflow: initial;
+}
+
+.case-page section {
+  overflow: hidden;
+}
+
+.case-page .section-case {
+  overflow: initial;
+}
+
 .case-page-top {
   padding-top: 0;
   padding-bottom: 0;
@@ -2215,7 +2246,9 @@ ul {
   text-transform: none;
 }
 
-.case-sidebar {
+.case-sidebar-wrap {
+  position: sticky;
+  top: 12rem;
   width: 31rem;
   flex-shrink: 0;
   color: #7b8a94;
