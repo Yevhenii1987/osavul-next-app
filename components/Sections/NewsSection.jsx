@@ -14,7 +14,7 @@ export default async function NewsSection() {
       <div className="container flex justify-center items-center flex-col">
         <motion.h2
           className="section-title"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
           transition={{ delay: 0.1, duration: 0.4 }}
@@ -24,7 +24,7 @@ export default async function NewsSection() {
         </motion.h2>
         <motion.p
           className="section-title-caption text-center"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
           transition={{ delay: 0.1, duration: 0.4 }}
@@ -34,10 +34,10 @@ export default async function NewsSection() {
         </motion.p>
         <motion.div
           className="section-news-wrap w-full"
-          initial={{ x: 300, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-          transition={{ delay: 0.3, duration: 0.4 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
         >
           <NewsCarousel news={news} />
         </motion.div>

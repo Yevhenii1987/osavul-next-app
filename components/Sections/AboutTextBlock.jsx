@@ -9,8 +9,8 @@ export default function AboutTextBlock() {
         <div className="container flex justify-between max-md:flex-col">
           <motion.h2
             className="block-title w-2/6 max-md:w-full"
-            initial={{ x: -300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >
@@ -18,8 +18,8 @@ export default function AboutTextBlock() {
           </motion.h2>
           <motion.p
             className="page-title-caption w-4/6 max-md:w-full"
-            initial={{ x: 300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >
@@ -41,8 +41,8 @@ export default function AboutTextBlock() {
         <div className="container block-border flex justify-between max-md:flex-col">
           <motion.h2
             className="block-title w-2/6 max-md:w-full"
-            initial={{ x: -300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >
@@ -50,8 +50,8 @@ export default function AboutTextBlock() {
           </motion.h2>
           <motion.p
             className="page-title-caption w-4/6 max-md:w-full"
-            initial={{ x: 300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
             transition={{ delay: 0.1, duration: 0.4 }}
           >

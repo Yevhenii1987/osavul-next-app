@@ -29,8 +29,8 @@ export default function HeroSection() {
       <motion.div
         className="section-hero-bg"
         style={{ opacity: opacityImage, y: yImage }}
-        initial={{ opacity: 0.7, scale: 1.2 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0.7 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
         <Image src={BgImg} alt=" " />
@@ -38,9 +38,9 @@ export default function HeroSection() {
       <motion.div
         className="container flex justify-center items-center flex-col"
         style={{ y: yText }}
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: [0, 0.2, 0.4, 1], scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.4 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 0.2, 0.4, 1] }}
+        transition={{ delay: 0.1, duration: 0.4 }}
       >
         <h2 className="section-title">
           AI-powered platform for information environment assessment

@@ -9,7 +9,7 @@ export default function AdvantagesSection({ data }) {
       <div className="container flex justify-center items-center flex-col">
         <motion.h2
           className="section-title"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
           transition={{ delay: 0.1, duration: 0.4 }}
@@ -18,7 +18,7 @@ export default function AdvantagesSection({ data }) {
         </motion.h2>
         <motion.p
           className="section-title-caption text-center"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
           transition={{ delay: 0.1, duration: 0.4 }}
@@ -26,28 +26,22 @@ export default function AdvantagesSection({ data }) {
           {data.sectionCaption}
         </motion.p>
 
-        <div className="section-advantages-wrap flex">
-          <motion.div
-            className="advantages-stat"
-            initial={{ x: -300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-            transition={{ delay: 0.7, duration: 0.4 }}
-          >
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+          transition={{ delay: 0.1, duration: 0.4 }}
+          className="section-advantages-wrap flex"
+        >
+          <div className="advantages-stat">
             {data.stat.map((item, index) => (
               <div key={index} className="advantages-stat-item">
                 <div className="num">{item.num}+</div>
                 <p>{item.text}</p>
               </div>
             ))}
-          </motion.div>
-          <motion.div
-            className="advantages-list grid grid-cols-2 gap-24 max-lg:gap-16"
-            initial={{ x: 300, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-            transition={{ delay: 0.3, duration: 0.4 }}
-          >
+          </div>
+          <div className="advantages-list grid grid-cols-2 gap-24 max-lg:gap-16">
             {data.adv.map((item, index) => (
               <div key={index} className="advantages-item">
                 <div className="advantages-item-inner">
@@ -61,9 +55,9 @@ export default function AdvantagesSection({ data }) {
                 </div>
               </div>
             ))}
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
-    </section>
+    </section >
   );
 }

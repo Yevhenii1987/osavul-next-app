@@ -11,7 +11,7 @@ export default function ProductsSection({ products }) {
       <div className="container flex justify-center items-center flex-col">
         <motion.h2
           className="section-title"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
           transition={{ delay: 0.1, duration: 0.4 }}
@@ -20,7 +20,7 @@ export default function ProductsSection({ products }) {
         </motion.h2>
         <motion.p
           className="section-title-caption text-center"
-          initial={{ y: 300, opacity: 0 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
           transition={{ delay: 0.1, duration: 0.4 }}
@@ -30,25 +30,21 @@ export default function ProductsSection({ products }) {
         </motion.p>
         <div className="section-products-wrap w-full">
           {products.map((prod) => (
-            <div
+            <motion.div
               key={prod.id}
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+              transition={{ delay: 0.1, duration: 0.4 }}
               className="section-products-item w-full flex justify-between items-center max-md:flex-col"
             >
-              <motion.div
+              <div
                 className="products-item-img w-1/2 max-lg:w-2/5 max-md:w-full"
-                initial={{ x: -300, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-                transition={{ delay: 0.1, duration: 0.4 }}
               >
                 <Image src={prod.image} alt=" " />
-              </motion.div>
-              <motion.div
+              </div>
+              <div
                 className="products-item-descr flex flex-col w-1/2 max-lg:w-3/5 max-md:w-full"
-                initial={{ x: 300, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-                transition={{ delay: 0.1, duration: 0.4 }}
               >
                 <h3 className="block-title">{prod.title}</h3>
                 <p
@@ -68,8 +64,8 @@ export default function ProductsSection({ products }) {
                     See how it works
                   </ButtonLink>
                 </ButtonLinks>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

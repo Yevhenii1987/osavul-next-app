@@ -5,24 +5,20 @@ import { motion } from 'motion/react';
 export default function AboutSection() {
   return (
     <section className="section-about section">
-      <div className="container grid grid-cols-2 gap-x-8 max-lg:grid-cols-1">
-        <motion.div
-          initial={{ x: -300, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-          transition={{ delay: 0.1, duration: 0.4 }}
-        >
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+        transition={{ delay: 0.1, duration: 0.4 }}
+        className="container grid grid-cols-2 gap-x-8 max-lg:grid-cols-1"
+      >
+        <div>
           <h2 className="section-title">
             About <br />
             company
           </h2>
-        </motion.div>
-        <motion.div
-          initial={{ x: 300, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-          transition={{ delay: 0.1, duration: 0.4 }}
-        >
+        </div>
+        <div>
           <p>
             Osavul is an advanced AI-driven platform for information assessment
             and narrative impact analysis.
@@ -41,8 +37,8 @@ export default function AboutSection() {
             and narrative attacks, helping to avoid reputational, economic, and
             other collateral risks.
           </p>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
