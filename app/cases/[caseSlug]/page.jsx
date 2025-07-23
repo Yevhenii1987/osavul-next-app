@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/UI/Breadcrumbs';
 import { getAdvantagesData, getCase } from '@/lib/http';
 import AnimationWrapper from '@/components/Sections/AnimationWrapper';
 import ArticleNav from '@/components/UI/ArticleNav';
+import ContactForm from '@/components/UI/ContactForm';
 
 export async function generateMetadata({ params }) {
   const caseData = getCase(params.caseSlug);
@@ -21,10 +22,10 @@ export default async function CasePage({ params }) {
   const advantagesData = await getAdvantagesData();
 
   return (
-    <main className="page case-page">
+    <main className="page article-page">
       <AnimationWrapper>
         <Breadcrumbs />
-        <section className="section case-page-top flex justify-between items-center">
+        <section className="section article-page-top flex justify-between items-center">
           <div className="container">
             <h2 className="page-title">{caseData.title}</h2>
           </div>
@@ -32,17 +33,21 @@ export default async function CasePage({ params }) {
 
         <section className="section section-case">
           <div className="container flex max-lg:flex-col">
-            <aside className="case-sidebar">
-              <div className="case-sidebar-wrap">
-                <div className="case-details">
+            <aside className="article-sidebar">
+              <div className="article-sidebar-wrap">
+                <div className="article-details">
                   <h3>Details</h3>
-                  <p>{caseData.details}</p>
+                  <div dangerouslySetInnerHTML={{
+                    __html: caseData.details,
+                  }}></div>
                 </div>
-                <ArticleNav navData={caseData.nav} />
+                <div className="sections-divider"></div>
+                {/* <ArticleNav navData={caseData.nav} /> */}
+                <ContactForm />
               </div>
             </aside>
             <article
-              className="case-content"
+              className="article-content"
               dangerouslySetInnerHTML={{
                 __html: caseData.article,
               }}

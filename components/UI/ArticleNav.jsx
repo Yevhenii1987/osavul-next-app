@@ -16,7 +16,7 @@ export default function ArticleNav({ navData }) {
   }
 
   return (
-    <nav className="case-nav">
+    <nav className="article-nav">
       <h3>Navigation</h3>
       <ul>
         {navData.map((item) => (
