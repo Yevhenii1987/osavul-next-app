@@ -6,6 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useState } from 'react';
 import { getNews } from '@/lib/http';
 import ButtonArrow from '../UI/ButtonArrow';
+import NewsCard from './NewsCard';
 
 export default function NewsCarousel({ news }) {
   const [newsArr, setNewsArr] = useState(news);
@@ -105,40 +106,7 @@ export default function NewsCarousel({ news }) {
         <div className="news-items embla" ref={emblaRef}>
           <div className="embla__container">
             {newsArr.map((item, index) => (
-              <article key={index} className="news-item embla__slide">
-                <div className="image">
-                  <Image src={item.img} alt=" " />
-                </div>
-                <div className="descr">
-                  <div className="descr-inner">
-                    <div className="descr-top flex items-center">
-                      <div className="tag">
-                        <Link href="/blog">{item.tag}</Link>
-                      </div>
-                      <div className="date flex items-center max-lg:hidden">
-                        {item.date}
-                      </div>
-                      {item.zoomLink && (
-                        <div className="zoom max-lg:hidden">
-                          <Link href={item.zoomLink}>ZOOM</Link>
-                        </div>
-                      )}
-                    </div>
-                    <div className="title">{item.title}</div>
-                    <div className="more max-lg:hidden">
-                      <Link href={item.link}>Read more</Link>
-                    </div>
-                    <div className="date-mob hidden max-lg:flex items-center">
-                      <div className="date flex items-center">{item.date}</div>
-                      {item.zoomLink && (
-                        <div className="zoom">
-                          <Link href={item.zoomLink}>ZOOM</Link>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </article>
+              <NewsCard key={index} classes="news-item embla__slide" newsItem={item} />
             ))}
           </div>
         </div>
