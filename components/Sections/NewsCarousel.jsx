@@ -5,6 +5,7 @@ import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useState } from 'react';
 import { getNews } from '@/lib/http';
+import ButtonArrow from '../UI/ButtonArrow';
 
 export default function NewsCarousel({ news }) {
   const [newsArr, setNewsArr] = useState(news);
@@ -81,14 +82,22 @@ export default function NewsCarousel({ news }) {
           </button>
         </div>
         <div className="slider-buttons max-md:hidden">
-          <button
+          {/* <button
             className={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
             onClick={scrollPrev}
           ></button>
           <button
             className={`${isNext && 'active'} slider-button slider-button--next embla__next`}
             onClick={scrollNext}
-          ></button>
+          ></button> */}
+          <ButtonArrow
+            classes={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
+            onClick={scrollPrev}
+          ></ButtonArrow>
+          <ButtonArrow
+            classes={`${isNext && 'active'} slider-button slider-button--next embla__next`}
+            onClick={scrollNext}
+          ></ButtonArrow>
         </div>
       </div>
       {isPending && <p>Fetching {newsTab}...</p>}

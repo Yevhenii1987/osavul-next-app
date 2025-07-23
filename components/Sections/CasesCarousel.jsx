@@ -37,22 +37,22 @@ export default function CasesCarousel({ cases }) {
   return (
     <>
       <div className="slider-buttons">
-        <button
+        {/* <button
           className={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
           onClick={scrollPrev}
         ></button>
         <button
           className={`${isNext && 'active'} slider-button slider-button--next embla__next`}
           onClick={scrollNext}
-        ></button>
-        {/* <ButtonArrow
+        ></button> */}
+        <ButtonArrow
           classes={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
           onClick={scrollPrev}
         ></ButtonArrow>
         <ButtonArrow
           classes={`${isNext && 'active'} slider-button slider-button--next embla__next`}
           onClick={scrollNext}
-        ></ButtonArrow> */}
+        ></ButtonArrow>
       </div>
 
       <div className="embla" ref={emblaRef}>
