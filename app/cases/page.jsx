@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 export default async function CasesPage() {
-  const cases = await getAllCases();
+  const { casesData, pageNum, isFirstPage, isLastPage } = await getAllCases();
   const advantagesData = await getAdvantagesData();
 
   return (
@@ -30,7 +30,7 @@ export default async function CasesPage() {
           </div>
         </section>
 
-        <CasesGrid cases={cases} />
+        <CasesGrid cases={casesData} />
 
         <AdvantagesSection data={advantagesData} />
         <BannerSection />
