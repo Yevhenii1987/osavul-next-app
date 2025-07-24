@@ -2523,6 +2523,58 @@ ul {
   } */
 }
 
+
+.contacts-page-wrap {
+  padding-bottom: 14rem;
+  border-bottom: 4px solid #f1f5f7;
+}
+
+.contacts-page-top {
+  padding-top: 0;
+}
+
+.contacts-title {
+  margin-bottom: 2.4rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: #000;
+}
+
+.contacts-page-image {
+  width: 40%;
+  height: auto;
+  height: 60rem;
+  flex-shrink: 0;
+  background: #f1f5f7;
+}
+
+.contacts-page-descr {
+  padding-left: 12rem;
+  width: 100%;
+}
+
+.contacts-item {
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 1023px) {
+  .contacts-page-wrap {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .contacts-page-descr {
+    padding-left: 0;
+  }
+
+  .contacts-page-image {
+    margin-bottom: 6rem;
+    width: 100%;
+  }
+}
+
 /* 
 
 
