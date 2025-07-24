@@ -31,7 +31,7 @@ export default async function CasePage({ params }) {
           </div>
         </section>
 
-        <section className="section section-case">
+        <section className="section section-article">
           <div className="container flex max-lg:flex-col">
             <aside className="article-sidebar">
               <div className="article-sidebar-wrap">
@@ -42,8 +42,8 @@ export default async function CasePage({ params }) {
                   }}></div>
                 </div>
                 <div className="sections-divider"></div>
-                {/* <ArticleNav navData={caseData.nav} /> */}
-                <ContactForm />
+                {caseData.showForm && <ContactForm />}
+                {!caseData.showForm && <ArticleNav navData={caseData.nav} />}
               </div>
             </aside>
             <article

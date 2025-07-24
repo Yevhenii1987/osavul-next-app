@@ -5,9 +5,9 @@ export default function NewsCard({ classes = '', newsItem }) {
   return (
     <>
       <article className={"news-item " + classes}>
-        <div className="image">
+        <Link href={`/blog/${newsItem.slug}`} className="image">
           <Image src={newsItem.img} alt=" " />
-        </div>
+        </Link>
         <div className="descr">
           <div className="descr-inner">
             <div className="descr-top flex items-center">
@@ -23,7 +23,7 @@ export default function NewsCard({ classes = '', newsItem }) {
                 </div>
               )}
             </div>
-            <div className="title">{newsItem.title}</div>
+            <Link href={`/blog/${newsItem.slug}`} className="title">{newsItem.title}</Link>
             <div className="more max-lg:hidden">
               <Link href={`/blog/${newsItem.slug}`}>Read more</Link>
             </div>

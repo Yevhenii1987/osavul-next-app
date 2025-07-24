@@ -31,7 +31,7 @@ export default async function ArticlePage({ params }) {
           </div>
         </section>
 
-        <section className="section section-case">
+        <section className="section section-article">
           <div className="container flex max-lg:flex-col">
             <aside className="article-sidebar">
               <div className="article-sidebar-wrap">
@@ -58,6 +58,9 @@ export default async function ArticlePage({ params }) {
             </article>
           </div>
         </section>
+
+        <div className="sections-divider"></div>
+
         <NewsSection />
         <SubscribeSection />
       </AnimationWrapper>

@@ -21,9 +21,7 @@ export default function SubscribeSection() {
           <label className="flex flex-nowrap w-full">
             <input type="email" placeholder="Write your email" required />
           </label>
-          <ButtonDark>
-            <button type="submit">Book demo</button>
-          </ButtonDark>
+          <ButtonDark type="submit">Book demo</ButtonDark>
         </form>
       </motion.div>
     </section>

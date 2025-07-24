@@ -1,16 +1,20 @@
+import BannerSection from '@/components/Sections/BannerSection';
+import NewsSection from '@/components/Sections/NewsSection';
 import SubscribeSection from '@/components/Sections/SubscribeSection';
+import AdvantagesSection from '@/components/Sections/AdvantagesSection.jsx';
 import Breadcrumbs from '@/components/UI/Breadcrumbs';
-import { getArticles } from '@/lib/http';
+import { getCareers, getAdvantagesData } from '@/lib/http';
 import AnimationWrapper from '@/components/Sections/AnimationWrapper';
-import BlogGrid from '@/components/Sections/BlogGrid';
+import CareersGrid from '@/components/Sections/CareersGrid';
 
 export const metadata = {
-  title: 'Blog',
+  title: 'Careers',
 };
 
 export default async function CareersPage() {
   // const { blogData, pageNum, isFirstPage, isLastPage } = getArticles('all');
-  const blogData = await getArticles('all');
+  const careersData = await getCareers();
+  const advantagesData = await getAdvantagesData();
 
   return (
     <main className="page cases-page">
@@ -28,8 +32,11 @@ export default async function CareersPage() {
           </div>
         </section>
 
-        <BlogGrid {...blogData} />
+        <CareersGrid {...careersData} />
 
+        <NewsSection />
+        <BannerSection />
+        <AdvantagesSection data={advantagesData} />
         <SubscribeSection />
       </AnimationWrapper>
     </main>

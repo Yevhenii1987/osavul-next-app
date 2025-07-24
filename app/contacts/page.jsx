@@ -1,7 +1,6 @@
 import BannerSection from '@/components/Sections/BannerSection';
 import NewsSection from '@/components/Sections/NewsSection';
 import SubscribeSection from '@/components/Sections/SubscribeSection';
-import ClientsSection from '@/components/Sections/ClientsSection.jsx';
 import AdvantagesSection from '@/components/Sections/AdvantagesSection.jsx';
 import Breadcrumbs from '@/components/UI/Breadcrumbs';
 import VideoBlock from '@/components/Video';

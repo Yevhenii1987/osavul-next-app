@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import ButtonDark from '../UI/ButtonDark';
 import { motion } from 'motion/react';
 
 export default function BannerSection() {
@@ -17,9 +16,9 @@ export default function BannerSection() {
         <h2 className="section-title">
           Excited to work together on your next project?
         </h2>
-        <ButtonDark>
-          <Link href={`/booking`}>Book demo</Link>
-        </ButtonDark>
+
+        <Link href={`/booking`} className='button-dark'>Book demo</Link>
+
       </motion.div>
     </section>
   );

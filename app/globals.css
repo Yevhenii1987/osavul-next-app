@@ -468,7 +468,7 @@ ul {
 }
 
 .button-dark:hover {
-  background: #7b8a94;
+  /* background: #7b8a94; */
 }
 
 .block-title {
@@ -1713,6 +1713,10 @@ ul {
   }
 }
 
+.news-item .image {
+  display: block;
+}
+
 .news-item .image img {
   object-fit: cover;
   height: 100%;
@@ -1745,6 +1749,7 @@ ul {
 }
 
 .news-item .title {
+  display: block;
   margin-bottom: 2.5rem;
   font-weight: 600;
   font-size: 2.4rem;
@@ -2390,7 +2395,7 @@ ul {
   overflow: hidden;
 }
 
-.article-page .section-case {
+.article-page .section-article {
   overflow: initial;
 }
 
@@ -2418,6 +2423,14 @@ ul {
 .article-details {
   margin-bottom: 6rem;
   font-size: 1.6rem;
+}
+
+.article-show-form {
+  margin-bottom: 6rem;
+}
+
+.article-show-form .sections-divider {
+  margin-top: 6rem;
 }
 
 .article-nav {
@@ -2449,7 +2462,7 @@ ul {
   color: #000;
 }
 
-.section-case h3 {
+.section-article h3 {
   margin-bottom: 2.5rem;
   font-weight: 600;
   font-size: 2.4rem;
@@ -2462,7 +2475,7 @@ ul {
   margin-bottom: 4rem;
 }
 
-.section-case h4 {
+.section-article h4 {
   /* margin-top: 1.8rem; */
   margin-bottom: 1.8rem;
   font-weight: 700;
@@ -2502,18 +2515,36 @@ ul {
   /* .case-page-top {
     padding-left: 4rem;
   } */
-  .case-page .page-title {
+  .article-page .page-title {
     font-size: 3.2rem;
   }
 
-  .case-sidebar {
+  .article-sidebar {
+    order: 2;
+  }
+
+  .article-sidebar-wrap {
     width: 100%;
+  }
+
+  .article-details,
+  .article-nav {
     display: none;
   }
 
-  .case-content {
+  .article-sidebar .sections-divider {
+    display: none;
+  }
+
+  .article-content {
     padding-left: 0;
     font-size: 1.6rem;
+    order: 1;
+  }
+
+  .article-show-form {
+    padding-top: 6rem;
+    margin-bottom: 0;
   }
 }
 
@@ -2572,6 +2603,69 @@ ul {
   .contacts-page-image {
     margin-bottom: 6rem;
     width: 100%;
+  }
+}
+
+.career-page h3 {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.careers-wrap {
+  border-bottom: 4px solid #f1f5f7;
+}
+
+.careers-grid {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.careers-grid-header {
+  margin-bottom: 2.4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 1.6rem;
+  color: #7b8a94;
+}
+
+.career-block {
+  margin-bottom: 1.6rem;
+  padding: 4.8rem 2.4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 2.4rem;
+  background: #f1f5f7;
+}
+
+.career-title {
+  padding-right: 5rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 4.8rem;
+  line-height: 1.2;
+}
+
+.career-sidebar .contact-form {
+  padding-top: 0;
+}
+
+@media (max-width: 1023px) {
+  .career-block {
+    margin-bottom: 1.6rem;
+    padding: 2.4rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 2.4rem;
+  }
+
+  .career-title {
+    padding-right: 0;
+    font-size: 2.4rem;
+  }
+
+  .career-block .row-name {
+    color: #7b8a94;
+    margin-bottom: 1rem;
   }
 }
 
