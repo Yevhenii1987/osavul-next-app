@@ -1729,6 +1729,7 @@ ul {
 .news-item .descr-inner {
   padding: 3.2rem;
   background: #fff;
+  border: 1px solid #f1f5f7;
 }
 
 .news-item .descr-top {
@@ -1820,6 +1821,23 @@ ul {
 
   .news-item .image {
     height: 28rem;
+  }
+}
+
+.blog-wrap {
+  padding-top: 6rem;
+}
+
+.blog_grid .news-item {
+  margin-right: 0;
+  margin-bottom: 3.2rem;
+  max-width: 100%;
+  width: calc(50% - 0.8rem);
+}
+
+@media (max-width: 1023px) {
+  .blog_grid .news-item {
+    width: 100%;
   }
 }
 

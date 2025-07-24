@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useState } from 'react';
 import { getNews } from '@/lib/http';
@@ -106,7 +104,7 @@ export default function NewsCarousel({ news }) {
         <div className="news-items embla" ref={emblaRef}>
           <div className="embla__container">
             {newsArr.map((item, index) => (
-              <NewsCard key={index} classes="news-item embla__slide" newsItem={item} />
+              <NewsCard key={index} classes="embla__slide" newsItem={item} />
             ))}
           </div>
         </div>

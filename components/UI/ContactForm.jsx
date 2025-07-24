@@ -35,7 +35,7 @@ export default function ContactForm() {
               <div className="checkbox-field">
                 <label htmlFor="accept">
                   <input type="checkbox" name="accept" id="accept" />
-                  <Image src={check} />
+                  <Image src={check} alt="check" />
                 </label>
               </div>
               <p>By submitting this form, I accept <Link href={`/`}>Privacy Policy</Link></p>

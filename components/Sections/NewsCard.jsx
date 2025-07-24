@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function NewsCard({ classes, newsItem }) {
+export default function NewsCard({ classes = '', newsItem }) {
   return (
     <>
-      <article className={classes}>
+      <article className={"news-item " + classes}>
         <div className="image">
           <Image src={newsItem.img} alt=" " />
         </div>
@@ -25,7 +25,7 @@ export default function NewsCard({ classes, newsItem }) {
             </div>
             <div className="title">{newsItem.title}</div>
             <div className="more max-lg:hidden">
-              <Link href={newsItem.link}>Read more</Link>
+              <Link href={`/blog/${newsItem.slug}`}>Read more</Link>
             </div>
             <div className="date-mob hidden max-lg:flex items-center">
               <div className="date flex items-center">{newsItem.date}</div>
