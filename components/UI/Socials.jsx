@@ -9,7 +9,7 @@ export default function Socials({ socials }) {
           key={soc.name}
           className="socials-item flex justify-center items-center"
         >
-          <Link href={soc.url}>
+          <Link href={soc.url} aria-label={'Our ' + soc.name}>
             <Image src={soc.img} alt={soc.name} />
           </Link>
         </div>

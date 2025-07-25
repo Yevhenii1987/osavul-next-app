@@ -41,6 +41,7 @@ export default async function ContactsPage() {
                 <h3 className="contacts-title">Email</h3>
                 <a
                   href="mailto:info@osavul.cloud"
+                  aria-label="Contact us via email"
                 >
                   info@osavul.cloud
                 </a>

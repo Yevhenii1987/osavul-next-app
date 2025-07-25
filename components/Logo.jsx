@@ -5,7 +5,7 @@ import logoImg from '@/assets/osavul-logo.svg';
 export default function Logo() {
   return (
     <div className="logo">
-      <Link href="/">
+      <Link href="/" aria-label="Go to main page">
         <Image src={logoImg} alt="osavul" />
       </Link>
     </div>

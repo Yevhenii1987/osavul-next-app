@@ -55,6 +55,7 @@ export default function NewsCarousel({ news }) {
             className={`news-link ${newsTab === 'all' && 'active'}`}
             onClick={(e) => handleTabClick(e)}
             value="all"
+            aria-label="View all"
           >
             All
           </button>
@@ -62,6 +63,7 @@ export default function NewsCarousel({ news }) {
             className={`news-link ${newsTab === 'news' && 'active'}`}
             onClick={(e) => handleTabClick(e)}
             value="news"
+            aria-label="View news"
           >
             News
           </button>
@@ -69,6 +71,7 @@ export default function NewsCarousel({ news }) {
             className={`news-link ${newsTab === 'webinars' && 'active'}`}
             onClick={(e) => handleTabClick(e)}
             value="webinars"
+            aria-label="View webinars"
           >
             Webinars
           </button>
@@ -76,6 +79,7 @@ export default function NewsCarousel({ news }) {
             className={`news-link ${newsTab === 'blog' && 'active'}`}
             onClick={(e) => handleTabClick(e)}
             value="blog"
+            aria-label="View blog"
           >
             Blog
           </button>

@@ -6,6 +6,7 @@ import ButtonDark from '@/components/UI/ButtonDark';
 import MainNavigation from '@/components/UI/MainNavigation';
 import Logo from '@/components/Logo';
 import Modal from './UI/Modal';
+import Link from 'next/link';
 
 export default function MainHeader() {
   const path = usePathname();
@@ -22,22 +23,26 @@ export default function MainHeader() {
   return (
     <>
       <header
-        className={`main-header max-lg:hidden ${
-          path !== '/' ? 'inner-header' : ''
-        }`}
+        className={`main-header max-lg:hidden ${path !== '/' ? 'inner-header' : ''
+          }`}
       >
         <div className="main-header-ctn container w-full flex justify-between items-center">
           <Logo />
           <nav className="flex justify-between items-center ml-auto">
             <MainNavigation />
           </nav>
-          <ButtonDark>Book demo</ButtonDark>
+          <Link
+            href={`/booking`}
+            className="button-dark"
+            aria-label="Fill in the form and book demo"
+          >
+            Book demo
+          </Link>
         </div>
       </header>
       <header
-        className={`main-header hidden max-lg:block ${
-          path !== '/' ? 'inner-header' : ''
-        }`}
+        className={`main-header hidden max-lg:block ${path !== '/' ? 'inner-header' : ''
+          }`}
       >
         <div className="main-header-ctn container w-full flex justify-between items-center">
           <Logo />

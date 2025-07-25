@@ -10,15 +10,20 @@ export default function BannerSection() {
         className="container flex flex-col items-center"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+        viewport={{ once: true, margin: '-100px 0px 0px 0px' }}
         transition={{ delay: 0.1, duration: 0.4 }}
       >
         <h2 className="section-title">
           Excited to work together on your next project?
         </h2>
 
-        <Link href={`/booking`} className='button-dark'>Book demo</Link>
-
+        <Link
+          href={`/booking`}
+          className="button-dark"
+          aria-label="Fill in the form and book demo"
+        >
+          Book demo
+        </Link>
       </motion.div>
     </section>
   );

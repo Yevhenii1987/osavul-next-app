@@ -52,10 +52,10 @@ export default function HeroSection() {
         </p>
         <div>
           <ButtonLinks>
-            <ButtonLink path={'/booking'} isActive={true}>
+            <ButtonLink path={'/booking'} isActive={true} label="Go to booking form">
               Book demo
             </ButtonLink>
-            <ButtonLink path={'/about'} isActive={false}>
+            <ButtonLink path={'/about'} isActive={false} label="Go to About page">
               Learn more
             </ButtonLink>
           </ButtonLinks>

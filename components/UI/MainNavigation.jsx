@@ -12,32 +12,32 @@ export default function MainNavigation({ menuClose }) {
     <>
       <ul className="main-navigation flex">
         <li>
-          <NavLink href="/products" click={handleClose}>
+          <NavLink href="/products" click={handleClose} label='Go to products'>
             Our products
           </NavLink>
         </li>
         <li>
-          <NavLink href="/cases" click={handleClose}>
+          <NavLink href="/cases" click={handleClose} label='Go to cases'>
             Cases
           </NavLink>
         </li>
         <li>
-          <NavLink href="/about" click={handleClose}>
+          <NavLink href="/about" click={handleClose} label='Go to About us'>
             About us
           </NavLink>
         </li>
         <li>
-          <NavLink href="/blog" click={handleClose}>
+          <NavLink href="/blog" click={handleClose} label='Go to blog'>
             Blog
           </NavLink>
         </li>
         <li>
-          <NavLink href="/careers" click={handleClose}>
+          <NavLink href="/careers" click={handleClose} label='Go to careers'>
             Careers
           </NavLink>
         </li>
         <li>
-          <NavLink href="/contacts" click={handleClose}>
+          <NavLink href="/contacts" click={handleClose} label='Go to contacts'>
             Contacts
           </NavLink>
         </li>
