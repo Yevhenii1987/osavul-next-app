@@ -1,12 +1,12 @@
-import BannerSection from '@/components/Sections/BannerSection';
+
 import NewsSection from '@/components/Sections/NewsSection';
 import SubscribeSection from '@/components/Sections/SubscribeSection';
-import AdvantagesSection from '@/components/Sections/AdvantagesSection.jsx';
 import Breadcrumbs from '@/components/UI/Breadcrumbs';
-import { getAdvantagesData, getArticle } from '@/lib/http';
+import { getAdvantagesData, getArticle, getSpeakers } from '@/lib/http';
 import AnimationWrapper from '@/components/Sections/AnimationWrapper';
 import ArticleNav from '@/components/UI/ArticleNav';
 import ContactForm from '@/components/UI/ContactForm';
+import SpeakersCarousel from '@/components/Sections/SpeakersCarousel';
 
 export async function generateMetadata({ params }) {
   const articleData = getArticle(params.blogSlug);
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ArticlePage({ params }) {
   const articleData = getArticle(params.blogSlug);
-  const advantagesData = await getAdvantagesData();
+  const speakersArr = await getSpeakers();
 
   return (
     <main className="page article-page">
@@ -49,12 +49,14 @@ export default async function ArticlePage({ params }) {
 
               </div>
             </aside>
-            <article
-              className="article-content"
-              dangerouslySetInnerHTML={{
-                __html: articleData.article,
-              }}
-            >
+            <article className="article-content">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: articleData.article,
+                }}
+              >
+              </div>
+              <SpeakersCarousel speakers={speakersArr} />
             </article>
           </div>
         </section>
