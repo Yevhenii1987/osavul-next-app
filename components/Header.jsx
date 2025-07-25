@@ -2,7 +2,6 @@
 
 import { usePathname } from 'next/navigation';
 import { useRef } from 'react';
-import ButtonDark from '@/components/UI/ButtonDark';
 import MainNavigation from '@/components/UI/MainNavigation';
 import Logo from '@/components/Logo';
 import Modal from './UI/Modal';

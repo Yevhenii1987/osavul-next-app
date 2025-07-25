@@ -3,6 +3,7 @@
 import ButtonDark from '../UI/ButtonDark';
 import { bookDemo } from '@/lib/actions';
 import { motion } from 'motion/react';
+import SubscribeForm from '../UI/SubscribeForm';
 
 export default function SubscribeSection() {
   return (
@@ -17,12 +18,7 @@ export default function SubscribeSection() {
         <h2 className="section-title">
           Subscribe to stay informed about all releases and updates!
         </h2>
-        <form className="input-sub flex" action={bookDemo}>
-          <label className="flex flex-nowrap w-full">
-            <input type="email" placeholder="Write your email" required />
-          </label>
-          <ButtonDark type="submit">Book demo</ButtonDark>
-        </form>
+        <SubscribeForm />
       </motion.div>
     </section>
   );

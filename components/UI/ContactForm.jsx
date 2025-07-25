@@ -67,7 +67,7 @@ export default function ContactForm({ formType = 'blog-form', actionFn = () => {
           </div>
         </div>
         <div className="form-actions">
-          <ButtonDark>{formData?.submitText}</ButtonDark>
+          <ButtonDark type="submit">{formData?.submitText}</ButtonDark>
         </div>
       </form>
     </div>

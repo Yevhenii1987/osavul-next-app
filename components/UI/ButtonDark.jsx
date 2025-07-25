@@ -1,3 +1,3 @@
-export default function ButtonDark({ children, onClick = () => { } }) {
-  return <button className="button-dark" onClick={onClick}>{children}</button>;
+export default function ButtonDark({ children, type = "button", onClick = () => { } }) {
+  return <button type={type} className="button-dark" onClick={onClick}>{children}</button>;
 }
