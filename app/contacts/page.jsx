@@ -32,11 +32,18 @@ export default async function ContactsPage() {
             <div className="contacts-page-descr">
               <div className="contacts-item">
                 <h3 className="contacts-title">Location</h3>
-                <p>123 Main Street, Apt 4B <br />Anytown, CA 91234, USA</p>
+                <address>
+                  123 Main Street, Apt 4B <br />
+                  Anytown, CA 91234, USA
+                </address>
               </div>
               <div className="contacts-item">
                 <h3 className="contacts-title">Email</h3>
-                <a href="mailto:info@osavul.cloud">info@osavul.cloud</a>
+                <a
+                  href="mailto:info@osavul.cloud"
+                >
+                  info@osavul.cloud
+                </a>
               </div>
 
               <div className="sections-divider"></div>
@@ -45,7 +52,6 @@ export default async function ContactsPage() {
             </div>
           </div>
         </section>
-
 
         <NewsSection />
         <BannerSection />

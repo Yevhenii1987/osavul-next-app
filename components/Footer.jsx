@@ -51,7 +51,7 @@ export default function MainFooter() {
         <div className="main-footer-top flex items-center">
           <Logo />
           <div className="divider ml-12 mr-12"></div>
-          <MainNavigation />
+          <nav><MainNavigation /></nav>
           <Socials socials={socials} />
         </div>
         <div className="main-footer-bottom flex justify-center items-center">
@@ -73,7 +73,7 @@ export default function MainFooter() {
       <footer className="main-footer container hidden max-lg:block">
         <div className="main-footer-menu">
           <h3 className="footer-title">Menu:</h3>
-          <div className="flex">
+          <nav className="flex">
             <MainNavigation />
             <ul className="main-footer-bottom-links">
               <li>
@@ -86,7 +86,7 @@ export default function MainFooter() {
                 <Link href="/agreement">Data Processing Agreement</Link>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
         <div className="main-footer-socials">
           <h3 className="footer-title">Social:</h3>
@@ -94,7 +94,7 @@ export default function MainFooter() {
         </div>
         <div className="main-footer-bottom flex flex-col items-center">
           <Logo />
-          <div className="copy">OSavul 2025 © All Rights Reserved</div>
+          <div className="copy">OSavul 2025 &copy; All Rights Reserved</div>
         </div>
       </footer>
     </>

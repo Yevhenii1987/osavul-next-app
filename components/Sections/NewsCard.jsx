@@ -14,12 +14,12 @@ export default function NewsCard({ classes = '', newsItem }) {
               <div className="tag">
                 <Link href="/blog">{newsItem.tag}</Link>
               </div>
-              <div className="date flex items-center max-lg:hidden">
-                {newsItem.date}
-              </div>
+              <time dateTime={newsItem.date} className="date flex items-center max-lg:hidden">
+                {newsItem.formattedDate}
+              </time>
               {newsItem.zoomLink && (
                 <div className="zoom max-lg:hidden">
-                  <Link href={newsItem.zoomLink}>ZOOM</Link>
+                  ⋅ <Link href={newsItem.zoomLink}>ZOOM</Link>
                 </div>
               )}
             </header>
