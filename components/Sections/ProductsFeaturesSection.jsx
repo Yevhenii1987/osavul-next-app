@@ -14,7 +14,7 @@ export default function ProductsFeaturesSection({ features }) {
       <div className="container flex justify-center items-center flex-col">
         <div className="section-products-wrap w-full">
           {features.map((feature) => (
-            <motion.div
+            <motion.article
               key={feature.id}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -50,7 +50,7 @@ export default function ProductsFeaturesSection({ features }) {
                   </ButtonLink>
                 </ButtonLinks>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

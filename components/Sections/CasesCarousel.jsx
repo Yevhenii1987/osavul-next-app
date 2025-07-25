@@ -58,7 +58,7 @@ export default function CasesCarousel({ cases }) {
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
           {cases.map((item, index) => (
-            <div
+            <article
               key={index}
               className="embla__slide cases-item flex justify-end items-stretch"
             >
@@ -86,7 +86,7 @@ export default function CasesCarousel({ cases }) {
               <div className="cases-item-image max-lg:hidden">
                 <Image src={item.img} alt=" " />
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

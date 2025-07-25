@@ -425,7 +425,6 @@ ul {
 }
 
 .button-link {
-  padding: 1.5rem 4.8rem;
   font-weight: 600;
   font-size: 14px;
   line-height: 143%;
@@ -433,6 +432,11 @@ ul {
   text-align: center;
   cursor: pointer;
   transition: all 0.2s;
+}
+
+.button-link a {
+  display: block;
+  padding: 1.5rem 4.8rem;
 }
 
 @media (max-width: 1023px) {

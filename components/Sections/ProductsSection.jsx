@@ -30,7 +30,7 @@ export default function ProductsSection({ products }) {
         </motion.p>
         <div className="section-products-wrap w-full">
           {products.map((prod) => (
-            <motion.div
+            <motion.article
               key={prod.id}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -65,7 +65,7 @@ export default function ProductsSection({ products }) {
                   </ButtonLink>
                 </ButtonLinks>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

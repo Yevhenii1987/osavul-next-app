@@ -20,7 +20,7 @@ export default function CareersGrid({ careers, pageNum, isFirstPage, isLastPage 
             <span>Location</span>
           </header>
           {careersArr.map((career, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -45,7 +45,7 @@ export default function CareersGrid({ careers, pageNum, isFirstPage, isLastPage 
                   }}></address>
                 </div>
               </Link>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>
