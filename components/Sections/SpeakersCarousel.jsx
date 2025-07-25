@@ -1,13 +1,16 @@
 'use client';
 
 import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import ButtonArrow from '../UI/ButtonArrow';
 import SpeakerCard from './SpeakerCard';
 
 export default function SpeakersCarousel({ speakers }) {
   const [isPrev, setIsPrev] = useState(false);
   const [isNext, setIsNext] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const [selectedSnap, setSelectedSnap] = useState(0);
+  const [snapCount, setSnapCount] = useState(0);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -24,6 +27,7 @@ export default function SpeakersCarousel({ speakers }) {
     }
     setIsPrev(emblaApi.canScrollPrev());
     setIsNext(emblaApi.canScrollNext());
+    setCurrentSlide(emblaApi.selectedScrollSnap() + 1);
   }, [emblaApi]);
 
   const scrollNext = useCallback(() => {
@@ -32,7 +36,21 @@ export default function SpeakersCarousel({ speakers }) {
     }
     setIsPrev(emblaApi.canScrollPrev());
     setIsNext(emblaApi.canScrollNext());
+    setCurrentSlide(emblaApi.selectedScrollSnap() + 1);
   }, [emblaApi]);
+
+  const updateScrollSnapState = useCallback((emblaApi) => {
+    setSnapCount(emblaApi.scrollSnapList().length)
+    setSelectedSnap(emblaApi.selectedScrollSnap())
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    updateScrollSnapState(emblaApi)
+    emblaApi.on('select', updateScrollSnapState)
+    emblaApi.on('reInit', updateScrollSnapState)
+  }, [emblaApi, updateScrollSnapState]);
 
   return (
     <section className="section-speakers">
@@ -45,7 +63,9 @@ export default function SpeakersCarousel({ speakers }) {
             onClick={scrollPrev}
           ></ButtonArrow>
           <div className="slides-num flex items-center justify-center">
-            <span className='slides-num-current'>1</span>&nbsp;/&nbsp;<span className='slides-num-all'>4</span>
+            {/* <span className='slides-num-current'>{currentSlide}</span>&nbsp;/&nbsp;<span className='slides-num-all'>{speakers.length - 1}</span> */}
+
+            <span className='slides-num-current'>{selectedSnap + 1}</span>&nbsp;/&nbsp;<span className='slides-num-all'>{snapCount}</span>
           </div>
           <ButtonArrow
             classes={`${isNext && 'active'

@@ -2585,6 +2585,10 @@ textarea.form-input {
   /* overflow: visible; */
 }
 
+.section-speakers .section-title {
+  text-transform: none;
+}
+
 .section-speakers .embla__container {
   display: flex;
 }
@@ -2662,6 +2666,7 @@ textarea.form-input {
   margin-bottom: 2.4rem;
   font-weight: 400;
   font-size: 2.1rem;
+  text-transform: uppercase;
 }
 
 .speaker-card img {
