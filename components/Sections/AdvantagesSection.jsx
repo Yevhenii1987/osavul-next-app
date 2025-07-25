@@ -7,25 +7,26 @@ export default function AdvantagesSection({ data }) {
   return (
     <section className="section-advantages section">
       <div className="container flex justify-center items-center flex-col">
-        <motion.h2
-          className="section-title"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-          transition={{ delay: 0.1, duration: 0.4 }}
-        >
-          {data.sectionTitle}
-        </motion.h2>
-        <motion.p
-          className="section-title-caption text-center"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
-          transition={{ delay: 0.1, duration: 0.4 }}
-        >
-          {data.sectionCaption}
-        </motion.p>
-
+        <hgroup className="section-title-group flex justify-center items-center flex-col">
+          <motion.h2
+            className="section-title"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+            transition={{ delay: 0.1, duration: 0.4 }}
+          >
+            {data.sectionTitle}
+          </motion.h2>
+          <motion.p
+            className="section-title-caption text-center"
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
+            transition={{ delay: 0.1, duration: 0.4 }}
+          >
+            {data.sectionCaption}
+          </motion.p>
+        </hgroup>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

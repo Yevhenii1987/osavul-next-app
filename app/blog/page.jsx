@@ -18,13 +18,13 @@ export default async function BlogPage() {
         <Breadcrumbs />
 
         <section className="section cases-page-top">
-          <div className="container flex justify-between items-center max-lg:flex-col">
+          <hgroup className="container flex justify-between items-center max-lg:flex-col">
             <h1 className="page-title w-1/2 max-lg:w-full">Blog</h1>
             <p className="page-title-caption w-1/2 max-lg:w-full">
               Experience Our AI-Driven Platform <br />
               for Information Assessment
             </p>
-          </div>
+          </hgroup>
         </section>
 
         <BlogGrid {...blogData} />

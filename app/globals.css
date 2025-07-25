@@ -584,6 +584,10 @@ address {
   padding: 12rem 0rem;
 }
 
+.section-title-group {
+  margin-bottom: 14.6rem;
+}
+
 .section-title {
   margin-bottom: 4.8rem;
   max-width: 82rem;
@@ -605,7 +609,6 @@ address {
 
 .section-title-caption {
   font-size: 2rem;
-  margin-bottom: 14.6rem;
   max-width: 62rem;
 }
 
@@ -784,7 +787,7 @@ address {
     margin-bottom: 2rem;
   }
 
-  .section-products .section-title-caption {
+  .section-products .section-title-group {
     margin-bottom: 6.2rem;
   }
 
@@ -1012,7 +1015,7 @@ address {
     margin-bottom: 2rem;
   }
 
-  .section-advantages .section-title-caption {
+  .section-advantages .section-title-group {
     margin-bottom: 4.5rem;
   }
 
@@ -1545,7 +1548,7 @@ address {
     margin-bottom: 2rem;
   }
 
-  .section-cases .section-title-caption {
+  .section-cases .section-title-group {
     margin-bottom: 4.2rem;
   }
 
@@ -1796,7 +1799,7 @@ address {
     margin-bottom: 2.1rem;
   }
 
-  .section-news .section-title-caption {
+  .section-news .section-title-group {
     margin-bottom: 4.5rem;
   }
 

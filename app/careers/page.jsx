@@ -22,13 +22,13 @@ export default async function CareersPage() {
         <Breadcrumbs />
 
         <section className="section cases-page-top">
-          <div className="container flex justify-between items-start max-lg:flex-col">
+          <hgroup className="container flex justify-between items-start max-lg:flex-col">
             <h1 className="page-title w-1/2 max-lg:w-full">Osavul <br /> Careers</h1>
             <p className="page-title-caption w-1/2 max-lg:w-full">
               We are hiring talented professionals globally to join our team in fighting one of the biggest challenges of our days. <br /><br />
               If you share our vision and want to make Internet more trustworthy place with less disinformation and manipulation - apply to our open positions at Osavul Careers.
             </p>
-          </div>
+          </hgroup>
         </section>
 
         <CareersGrid {...careersData} />
