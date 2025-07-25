@@ -3,13 +3,12 @@ import NewsSection from '@/components/Sections/NewsSection';
 import SubscribeSection from '@/components/Sections/SubscribeSection';
 import AdvantagesSection from '@/components/Sections/AdvantagesSection.jsx';
 import Breadcrumbs from '@/components/UI/Breadcrumbs';
-import VideoBlock from '@/components/Video';
 import { getAdvantagesData } from '@/lib/http';
 import AnimationWrapper from '@/components/Sections/AnimationWrapper';
 import ContactForm from '@/components/UI/ContactForm';
 
 export const metadata = {
-  title: 'About Us',
+  title: 'Our Contacts',
   description:
     'Osavul leverages AI-driven technology to protect organizations from various information threats.',
 };
@@ -49,7 +48,7 @@ export default async function ContactsPage() {
 
               <div className="sections-divider"></div>
 
-              <ContactForm />
+              <ContactForm formType="contacts-form" />
             </div>
           </div>
         </section>

@@ -27,7 +27,7 @@ export default function CareerSidebar({ location, nav }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <ContactForm />
+              <ContactForm formType="career-form" />
             </motion.div>}
         </AnimatePresence>
 

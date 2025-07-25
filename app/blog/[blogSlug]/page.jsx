@@ -44,7 +44,7 @@ export default async function ArticlePage({ params }) {
 
                 <div className="sections-divider"></div>
 
-                {articleData.showForm && <ContactForm />}
+                {articleData.showForm && <ContactForm formType="blog-form" />}
                 {!articleData.showForm && <ArticleNav navData={articleData.nav} />}
 
               </div>

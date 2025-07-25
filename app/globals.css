@@ -203,8 +203,13 @@ address {
   margin-bottom: 2.5rem;
   font-weight: 600;
   font-size: 2.4rem;
-  line-height: 1;
+  line-height: 1.1;
   color: #000;
+}
+
+.contact-form .form-text {
+  color: #7b8a94;
+  line-height: 1.4;
 }
 
 .form-fields {
@@ -240,6 +245,10 @@ address {
   border: none;
   outline: none;
   color: #03001c;
+}
+
+textarea.form-input {
+  height: 12rem;
 }
 
 .form-input::placeholder {
@@ -2598,6 +2607,10 @@ address {
 
 .contacts-item {
   margin-bottom: 6rem;
+}
+
+.booking-page .contact-form {
+  padding-top: 0;
 }
 
 @media (max-width: 1023px) {
