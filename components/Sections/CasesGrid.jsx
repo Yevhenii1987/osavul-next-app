@@ -8,7 +8,7 @@ export default function CasesGrid({ cases }) {
         {cases.map((caseItem, index) => (
           <div key={index} className="case-block">
             <div className="case-block-descr">
-              <h4 className="case-block-title">{caseItem.title}</h4>
+              <h3 className="case-block-title">{caseItem.title}</h3>
               <Link href={`/cases/${caseItem.slug}`}>Read more</Link>
             </div>
             <div className="case-block-image">

@@ -21,9 +21,9 @@ export default async function ProductsPage() {
         <Breadcrumbs />
         <section className="section products-page-top">
           <div className="container flex justify-between items-center max-lg:flex-col">
-            <h2 className="page-title text-start w-1/2 max-lg:w-full">
+            <h1 className="page-title text-start w-1/2 max-lg:w-full">
               Our Products
-            </h2>
+            </h1>
             <p className="page-title-caption w-1/2 max-lg:w-full">
               Osavul leverages AI-driven technology to protect organizations
               from various information threats.

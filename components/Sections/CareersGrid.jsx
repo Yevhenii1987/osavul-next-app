@@ -28,7 +28,7 @@ export default function CareersGrid({ careers, pageNum, isFirstPage, isLastPage 
               transition={{ delay: 0.1, duration: 0.4 }}
             >
               <Link href={`/careers/${career.slug}`} className="career-block">
-                <h2 className="career-title">{career.title}</h2>
+                <h3 className="career-title">{career.title}</h3>
                 <div className="career-skills">
                   <p className="row-name lg:hidden">Skills:</p>
                   <ul>

@@ -83,7 +83,7 @@ export default async function ProductPage({ params }) {
                   <path className="svg-arrow--sm" d="M39 29L42 32L39 35" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
                 </svg>
               </Link>
-              <h2 className="page-title flex text-center">{product.title}</h2>
+              <h1 className="page-title flex text-center">{product.title}</h1>
               <Link
                 href={`/products/${nextProduct.slug}`}
                 className="btn btn--next"

@@ -23,7 +23,7 @@ export default async function ContactsPage() {
         <Breadcrumbs />
         <section className="section contacts-page-top">
           <div className="container flex justify-between items-center max-lg:flex-col">
-            <h2 className="page-title w-1/2 max-lg:w-full">Contacts</h2>
+            <h1 className="page-title w-1/2 max-lg:w-full">Contacts</h1>
           </div>
         </section>
         <section className="contacts-page-wrap">

@@ -27,7 +27,7 @@ export default async function ArticlePage({ params }) {
         <Breadcrumbs />
         <section className="section article-page-top flex justify-between items-center">
           <div className="container">
-            <h2 className="page-title">{articleData.title}</h2>
+            <h1 className="page-title">{articleData.title}</h1>
           </div>
         </section>
 

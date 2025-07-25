@@ -19,7 +19,7 @@ export default async function BlogPage() {
 
         <section className="section cases-page-top">
           <div className="container flex justify-between items-center max-lg:flex-col">
-            <h2 className="page-title w-1/2 max-lg:w-full">Blog</h2>
+            <h1 className="page-title w-1/2 max-lg:w-full">Blog</h1>
             <p className="page-title-caption w-1/2 max-lg:w-full">
               Experience Our AI-Driven Platform <br />
               for Information Assessment

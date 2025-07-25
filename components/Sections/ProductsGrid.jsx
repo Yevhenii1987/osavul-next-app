@@ -10,7 +10,7 @@ export default function ProductsGrid({ products }) {
             <div className="image">
               <Image src={product.image} alt=" " />
             </div>
-            <div className="title">{product.title}</div>
+            <h3 className="title">{product.title}</h3>
             <div className="text">{product.text}</div>
             <Link href={`/products/${product.slug}`}>Learn more</Link>
           </article>

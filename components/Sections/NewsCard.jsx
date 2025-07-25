@@ -10,7 +10,7 @@ export default function NewsCard({ classes = '', newsItem }) {
         </Link>
         <div className="descr">
           <div className="descr-inner">
-            <div className="descr-top flex items-center">
+            <header className="descr-top flex items-center">
               <div className="tag">
                 <Link href="/blog">{newsItem.tag}</Link>
               </div>
@@ -22,19 +22,19 @@ export default function NewsCard({ classes = '', newsItem }) {
                   <Link href={newsItem.zoomLink}>ZOOM</Link>
                 </div>
               )}
-            </div>
-            <Link href={`/blog/${newsItem.slug}`} className="title">{newsItem.title}</Link>
+            </header>
+            <h3 className="title"><Link href={`/blog/${newsItem.slug}`}>{newsItem.title}</Link></h3>
             <div className="more max-lg:hidden">
               <Link href={`/blog/${newsItem.slug}`}>Read more</Link>
             </div>
-            <div className="date-mob hidden max-lg:flex items-center">
+            <footer className="date-mob hidden max-lg:flex items-center">
               <div className="date flex items-center">{newsItem.date}</div>
               {newsItem.zoomLink && (
                 <div className="zoom">
                   <Link href={newsItem.zoomLink}>ZOOM</Link>
                 </div>
               )}
-            </div>
+            </footer>
           </div>
         </div>
       </article>
