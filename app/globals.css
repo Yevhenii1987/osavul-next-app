@@ -2156,7 +2156,7 @@ textarea.form-input {
   padding-top: 0;
 }
 
-.product-features .container {
+.product-features-grid {
   column-count: 4;
   column-gap: 1.6rem;
   page-break-inside: avoid;
@@ -2205,13 +2205,13 @@ textarea.form-input {
     font-size: 1.6rem;
   }
 
-  .product-features .container {
+  .product-features-grid {
     column-count: 3;
   }
 }
 
 @media (max-width: 767px) {
-  .product-features .container {
+  .product-features-grid {
     column-count: 2;
   }
 
@@ -2221,7 +2221,7 @@ textarea.form-input {
 }
 
 @media (max-width: 575px) {
-  .product-features .container {
+  .product-features-grid {
     column-count: 1;
   }
 }
@@ -2361,7 +2361,7 @@ textarea.form-input {
     margin-bottom: 2.5rem;
   }
 
-  .cases-wrap .container {
+  .cases-grid {
     column-count: 2;
     column-gap: 1.6rem;
   }
@@ -2377,7 +2377,7 @@ textarea.form-input {
 }
 
 @media (max-width: 767px) {
-  .cases-wrap .container {
+  .cases-grid {
     column-count: 1;
   }
 }
