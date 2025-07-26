@@ -60,8 +60,7 @@ export default function ContactForm({ formType = 'blog-form', actionFn = () => {
                 </label>
               </div>
               <p>
-                By submitting this form, I accept
-                <Link href={`/`}>Privacy Policy</Link>
+                By submitting this form, I accept <Link href={`/`}>Privacy Policy</Link>
               </p>
             </div>
           </div>

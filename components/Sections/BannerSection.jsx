@@ -2,10 +2,13 @@
 
 import Link from 'next/link';
 import { motion } from 'motion/react';
+import Image from 'next/image';
+import bg_img from '@/assets/bg-dark.svg';
 
 export default function BannerSection() {
   return (
     <section className="section-dark section">
+      <div className="section-dark-bg"><Image src={bg_img} alt="dark background" /></div>
       <motion.div
         className="container flex flex-col items-center"
         initial={{ y: 100, opacity: 0 }}

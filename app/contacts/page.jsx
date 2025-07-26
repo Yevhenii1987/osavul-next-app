@@ -6,6 +6,8 @@ import Breadcrumbs from '@/components/UI/Breadcrumbs';
 import { getAdvantagesData } from '@/lib/http';
 import AnimationWrapper from '@/components/Sections/AnimationWrapper';
 import ContactForm from '@/components/UI/ContactForm';
+import Image from 'next/image';
+import img from '@/assets/img-3.jpg';
 
 export const metadata = {
   title: 'Our Contacts',
@@ -27,7 +29,7 @@ export default async function ContactsPage() {
         </section>
         <section className="contacts-page-wrap">
           <div className="container flex max-lg:flex-col">
-            <div className="contacts-page-image"></div>
+            <div className="contacts-page-image"><Image src={img} priority={true} alt="place" /></div>
             <div className="contacts-page-descr">
               <div className="contacts-item">
                 <h3 className="contacts-title">Location</h3>

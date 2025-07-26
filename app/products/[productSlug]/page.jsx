@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
-import arrow from '@/assets/arr-3.svg';
 import CasesSection from '@/components/Sections/CasesSection';
 import BannerSection from '@/components/Sections/BannerSection';
 import NewsSection from '@/components/Sections/NewsSection';
@@ -77,7 +75,6 @@ export default async function ProductPage({ params }) {
                 href={`/products/${prevProduct.slug}`}
                 className="btn btn--prev"
               >
-                {/* <Image src={arrow} alt=" " /> */}
                 <svg className="svg-arrow-box" width="92" height="64" viewBox="0 0 92 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className="svg-arrow" d="M47 24L55 32L47 40" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
                   <path className="svg-arrow--sm" d="M39 29L42 32L39 35" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
@@ -88,7 +85,6 @@ export default async function ProductPage({ params }) {
                 href={`/products/${nextProduct.slug}`}
                 className="btn btn--next"
               >
-                {/* <Image src={arrow} alt=" " /> */}
                 <svg className="svg-arrow-btn" width="92" height="64" viewBox="0 0 92 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className="svg-arrow" d="M47 24L55 32L47 40" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
                   <path className="svg-arrow--sm" d="M39 29L42 32L39 35" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />

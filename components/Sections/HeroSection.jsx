@@ -33,7 +33,7 @@ export default function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <Image src={BgImg} alt=" " />
+        <Image src={BgImg} priority={true} alt="Hero background" />
       </motion.div>
       <motion.div
         className="container flex justify-center items-center flex-col"

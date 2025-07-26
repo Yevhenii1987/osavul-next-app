@@ -20,14 +20,14 @@ export default function VideoBlock({ src }) {
       {videoShow && (
         <div className="video-cover flex justify-center items-center">
           <div className="video-cover-image">
-            <Image src={cover} alt=" " />
+            <Image src={cover} priority={true} alt="Video cover" />
           </div>
           <button
             className="video-play flex justify-center items-center"
             onClick={handleVideoShow}
           >
             Watch video
-            <Image src={play} alt=" " />
+            <Image src={play} alt="play icon" />
           </button>
         </div>
       )}
