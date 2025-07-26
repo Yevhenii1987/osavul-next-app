@@ -9,7 +9,6 @@ export const metadata = {
 };
 
 export default async function BlogPage() {
-  // const { blogData, pageNum, isFirstPage, isLastPage } = getArticles('all');
   const blogData = await getArticles('all');
 
   return (

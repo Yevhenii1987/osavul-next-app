@@ -2,48 +2,40 @@
 
 import { getArticles } from '@/lib/http';
 import NewsCard from './NewsCard';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Pagination from './Pagination';
 
-export default function BlogGrid({ articles, pageNum, isFirstPage, isLastPage }) {
+export default function BlogGrid({ articles, pageNum, pagesCount }) {
   const [articlesTab, setArticlesTab] = useState('all');
   const [articlesArr, setArticlesArr] = useState(articles);
   const [page, setPage] = useState(pageNum);
-  const [isFirst, setIsFirst] = useState(isFirstPage);
-  const [isLast, setIsLast] = useState(isLastPage);
   const [isPending, setIsPending] = useState(false);
 
-  async function handleTabClick(e) {
-    setArticlesTab(e.target.value);
-    setIsPending(true);
-    const { articles, pageNum, isFirstPage, isLastPage } = await getArticles(articlesTab);
-    setIsPending(false);
-    setArticlesArr(articles);
-    setPage(pageNum);
-    setIsFirst(isFirstPage);
-    setIsLast(isLastPage);
-  }
-
-  async function handlePrev() {
-    if (!isFirst) {
+  useEffect(() => {
+    async function fetchArticles() {
       setIsPending(true);
-      const { articles, pageNum, isFirstPage, isLastPage } = await getArticles(articlesTab, page - 1);
+      const { articles } = await getArticles(articlesTab, page);
       setIsPending(false);
       setArticlesArr(articles);
-      setPage(pageNum);
-      setIsFirst(isFirstPage);
-      setIsLast(isLastPage);
+      console.log(`state page: ${page}`);
+    }
+    fetchArticles();
+  }, [page, articlesTab]);
+
+  function handleTabClick(e) {
+    setArticlesTab(e.target.value);
+    setPage(1);
+  }
+
+  function handlePrev() {
+    if (page !== 1) {
+      setPage((prevState) => prevState - 1);
     }
   }
 
-  async function handleNext() {
-    if (!isLast) {
-      setIsPending(true);
-      const { articles, pageNum, isFirstPage, isLastPage } = await getArticles(articlesTab, page + 1);
-      setIsPending(false);
-      setArticlesArr(articles);
-      setPage(pageNum);
-      setIsFirst(isFirstPage);
-      setIsLast(isLastPage);
+  function handleNext() {
+    if (page < pagesCount) {
+      setPage((prevState) => prevState + 1);
     }
   }
   return (
@@ -89,7 +81,7 @@ export default function BlogGrid({ articles, pageNum, isFirstPage, isLastPage })
             ))}
           </div>
         )}
-
+        <Pagination current={page} pagesCount={pagesCount} onPrev={handlePrev} onNext={handleNext} />
       </div>
     </section>
   );

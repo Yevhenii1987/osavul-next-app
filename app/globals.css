@@ -1382,6 +1382,25 @@ textarea.form-input {
   transform: rotateY(180deg);
 }
 
+.pagination {
+  margin-top: 6.4rem;
+}
+
+.pagination-button--prev {
+  transform: rotateY(180deg);
+}
+
+.pagination .pages-counter {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  color: #7b8a94;
+  font-size: 1.6rem;
+}
+
+.pagination .page-current {
+  color: #03001c;
+}
+
 .section-cases {
   border-top: 4px solid #f1f5f7;
   border-bottom: 4px solid #f1f5f7;
@@ -2293,7 +2312,7 @@ textarea.form-input {
   padding-bottom: 0;
 }
 
-.cases-wrap .container {
+.cases-grid {
   column-count: 3;
   column-gap: 1.6rem;
   page-break-inside: avoid;
