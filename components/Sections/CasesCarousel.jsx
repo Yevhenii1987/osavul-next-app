@@ -39,12 +39,12 @@ export default function CasesCarousel({ cases }) {
       <div className="slider-buttons">
         <ButtonArrow
           classes={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
-          name="Previous slide button"
+          label="Previous slide button"
           onClick={scrollPrev}
         ></ButtonArrow>
         <ButtonArrow
           classes={`${isNext && 'active'} slider-button slider-button--next embla__next`}
-          name="Next slide button"
+          label="Next slide button"
           onClick={scrollNext}
         ></ButtonArrow>
       </div>
