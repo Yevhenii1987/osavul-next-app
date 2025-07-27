@@ -36,14 +36,11 @@ export default function HeroSection() {
 
   let content = (
     <>
-      <motion.div
+      <div
         className="section-hero-bg"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.05 }}
       >
         <Image src={BgImgMob} priority={true} alt="Hero background" sizes="(max-width: 768px) 100vw, 740px" />
-      </motion.div>
+      </div>
       <div
         className="container flex justify-center items-center flex-col"
       >
