@@ -12,18 +12,38 @@ export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
-    if (window.innerWidth < 1024) {
-      setIsMobile(true);
+    if (window.innerWidth >= 1024) {
+      setIsMobile(false);
     }
   }, [isMobile, setIsMobile]);
 
+  const { scrollY } = useScroll();
+  const opacityImage = useTransform(
+    scrollY,
+    [0, 200, 400, 600, 1000],
+    [1, 0.8, 0.6, 0.4, 0.2]
+  );
+  const yText = useTransform(
+    scrollY,
+    [0, 300, 500, 700, 1000],
+    [0, -10, -40, -70, -100]
+  );
+  const yImage = useTransform(
+    scrollY,
+    [0, 200, 400, 600, 1000],
+    [0, 20, 40, 60, 80]
+  );
+
   let content = (
     <>
-      <div
+      <motion.div
         className="section-hero-bg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.05 }}
       >
         <Image src={BgImgMob} priority={true} alt="Hero background" sizes="(max-width: 768px) 100vw, 740px" />
-      </div>
+      </motion.div>
       <div
         className="container flex justify-center items-center flex-col"
       >
@@ -90,23 +110,6 @@ export default function HeroSection() {
       </>
     );
   }
-
-  const { scrollY } = useScroll();
-  const opacityImage = useTransform(
-    scrollY,
-    [0, 200, 400, 600, 1000],
-    [1, 0.8, 0.6, 0.4, 0.2]
-  );
-  const yText = useTransform(
-    scrollY,
-    [0, 300, 500, 700, 1000],
-    [0, -10, -40, -70, -100]
-  );
-  const yImage = useTransform(
-    scrollY,
-    [0, 200, 400, 600, 1000],
-    [0, 20, 40, 60, 80]
-  );
 
   return (
     <section className="section-hero section">
