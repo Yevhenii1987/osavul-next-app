@@ -2157,14 +2157,14 @@ textarea.form-input {
 }
 
 .product-features-grid {
-  column-count: 4;
+  /* column-count: 4;
   column-gap: 1.6rem;
   page-break-inside: avoid;
-  break-inside: avoid-column;
+  break-inside: avoid-column; */
 }
 
 .product-feature {
-  margin-bottom: 1.6rem;
+  /* margin-bottom: 1.6rem; */
   padding: 3.2rem 2.4rem;
   background: #f1f5f7;
   break-inside: avoid-column;
