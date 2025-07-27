@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import Pagination from './Pagination';
+import Pagination from '../UI/Pagination';
 import { getAllCases } from '@/lib/http';
 
 export default function CasesGrid({ cases, pageNum, pagesCount }) {
@@ -45,7 +45,7 @@ export default function CasesGrid({ cases, pageNum, pagesCount }) {
                 <Link href={`/cases/${caseItem.slug}`}>Read more</Link>
               </div>
               <div className="case-block-image">
-                {caseItem.image && <Image src={caseItem.image} alt=" " />}
+                {caseItem.image && <Image src={caseItem.image} alt={caseItem.title} />}
               </div>
             </div>
           ))}

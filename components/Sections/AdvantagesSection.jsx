@@ -48,7 +48,7 @@ export default function AdvantagesSection({ data }) {
                 <div className="advantages-item-inner">
                   <div className="advantages-item-top">
                     <div className="advantages-item-icon">
-                      <Image src={item.img} alt=" " />
+                      <Image src={item.img} alt={item.title} />
                     </div>
                     <h3 className="advantages-item-title">{item.title}</h3>
                   </div>

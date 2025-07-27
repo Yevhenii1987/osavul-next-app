@@ -6,7 +6,7 @@ export default function SpeakerCard({ classes = '', speaker }) {
     <>
       <article className={"speaker-card " + classes}>
         <div className="speaker-image">
-          <Image src={speaker.img} alt=" " />
+          <Image src={speaker.img} alt={speaker.name} />
         </div>
         <div className="speaker-descr">
           <h3 className="speaker-title">{speaker.name}</h3>

@@ -68,12 +68,13 @@ export default async function ProductPage({ params }) {
         <section className="video">
           <div className="container">
             <div className="video-ui flex justify-between items-center">
-              <Link href={`/products/${prevProduct.slug}`}>
+              <Link href={`/products/${prevProduct.slug}`} aria-label={prevProduct.title}>
                 {prevProduct.title}
               </Link>
               <Link
                 href={`/products/${prevProduct.slug}`}
                 className="btn btn--prev"
+                aria-label={prevProduct.title}
               >
                 <svg className="svg-arrow-box" width="92" height="64" viewBox="0 0 92 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className="svg-arrow" d="M47 24L55 32L47 40" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
@@ -84,13 +85,14 @@ export default async function ProductPage({ params }) {
               <Link
                 href={`/products/${nextProduct.slug}`}
                 className="btn btn--next"
+                aria-label={nextProduct.title}
               >
                 <svg className="svg-arrow-btn" width="92" height="64" viewBox="0 0 92 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className="svg-arrow" d="M47 24L55 32L47 40" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
                   <path className="svg-arrow--sm" d="M39 29L42 32L39 35" stroke="#03001C" strokeWidth="4" strokeLinecap="square" />
                 </svg>
               </Link>
-              <Link href={`/products/${nextProduct.slug}`}>
+              <Link href={`/products/${nextProduct.slug}`} aria-label={nextProduct.title}>
                 {nextProduct.title}
               </Link>
             </div>

@@ -8,7 +8,7 @@ export default function ProductsGrid({ products }) {
         {products.map((product) => (
           <article key={product.id} className="products-item">
             <div className="image">
-              <Image src={product.image} alt=" " />
+              <Image src={product.image} alt={product.title} />
             </div>
             <h3 className="title">{product.title}</h3>
             <div className="text">{product.text}</div>

@@ -37,20 +37,14 @@ export default function CasesCarousel({ cases }) {
   return (
     <>
       <div className="slider-buttons">
-        {/* <button
-          className={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
-          onClick={scrollPrev}
-        ></button>
-        <button
-          className={`${isNext && 'active'} slider-button slider-button--next embla__next`}
-          onClick={scrollNext}
-        ></button> */}
         <ButtonArrow
           classes={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
+          name="Previous slide button"
           onClick={scrollPrev}
         ></ButtonArrow>
         <ButtonArrow
           classes={`${isNext && 'active'} slider-button slider-button--next embla__next`}
+          name="Next slide button"
           onClick={scrollNext}
         ></ButtonArrow>
       </div>
@@ -67,14 +61,14 @@ export default function CasesCarousel({ cases }) {
                   <Link href={`/cases/${item.slug}`}>{item.title}</Link>
                 </h3>
                 <div className="cases-item-image hidden max-lg:block">
-                  <Image src={item.img} alt=" " />
+                  <Image src={item.img} alt={item.title} />
                 </div>
                 <div className="cases-item-bottom flex justify-between w-full">
                   {item.list.map((listItem, index) => (
                     <div key={index} className="cases-list-item">
                       <div className="cases-list-item-top">
                         <div className="icon">
-                          <Image src={listItem.icon} alt=" " />
+                          <Image src={listItem.icon} alt="icon" />
                         </div>
                         <p className="title">{listItem.title}</p>
                       </div>
@@ -84,7 +78,7 @@ export default function CasesCarousel({ cases }) {
                 </div>
               </div>
               <div className="cases-item-image max-lg:hidden">
-                <Image src={item.img} alt=" " />
+                <Image src={item.img} alt={item.title} />
               </div>
             </article>
           ))}

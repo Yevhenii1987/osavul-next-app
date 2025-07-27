@@ -24,16 +24,19 @@ export default function NewsCarousel({ news }) {
   //   fetchArticles();
   // }, [newsTab]);
 
-  const handleTabClick = useCallback(async (e) => {
-    setNewsTab(e.target.value);
-    setIsPending(true);
-    const { news, newsTag } = await getNews(e.target.value);
-    setIsPending(false);
-    setNewsArr(news);
-    setIsNext(true);
-    setIsPrev(false);
-    console.log(newsTag);
-  }, [newsTab])
+  const handleTabClick = useCallback(
+    async (e) => {
+      setNewsTab(e.target.value);
+      setIsPending(true);
+      const { news, newsTag } = await getNews(e.target.value);
+      setIsPending(false);
+      setNewsArr(news);
+      setIsNext(true);
+      setIsPrev(false);
+      console.log(newsTag);
+    },
+    [newsTab]
+  );
 
   // async function handleTabClick(e) {
   //   setNewsTab(e.target.value);
@@ -108,11 +111,15 @@ export default function NewsCarousel({ news }) {
         </div>
         <div className="slider-buttons max-md:hidden">
           <ButtonArrow
-            classes={`${isPrev && 'active'} slider-button slider-button--prev embla__prev`}
+            classes={`${isPrev && 'active'
+              } slider-button slider-button--prev embla__prev`}
+            name="Previous slide button"
             onClick={scrollPrev}
           ></ButtonArrow>
           <ButtonArrow
-            classes={`${isNext && 'active'} slider-button slider-button--next embla__next`}
+            classes={`${isNext && 'active'
+              } slider-button slider-button--next embla__next`}
+            name="Next slide button"
             onClick={scrollNext}
           ></ButtonArrow>
         </div>

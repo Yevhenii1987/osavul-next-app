@@ -44,7 +44,7 @@ export default function ProductsSection({ products }) {
               <div
                 className="products-item-img w-1/2 max-lg:w-2/5 max-md:w-full"
               >
-                <Image src={prod.image} alt=" " />
+                <Image src={prod.image} alt={prod.title} />
               </div>
               <div
                 className="products-item-descr flex flex-col w-1/2 max-lg:w-3/5 max-md:w-full"

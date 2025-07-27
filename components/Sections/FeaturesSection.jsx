@@ -19,7 +19,7 @@ export default function FeaturesSection({ features }) {
             >
               <div className="product-feature-top">
                 <div className="product-feature-icon">
-                  <Image src={item.icon} alt=" " />
+                  <Image src={item.icon} alt={item.title} />
                 </div>
                 <h4 className="product-feature-title">{item.title}</h4>
               </div>

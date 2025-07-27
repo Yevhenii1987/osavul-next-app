@@ -3,7 +3,7 @@
 import { getArticles } from '@/lib/http';
 import NewsCard from './NewsCard';
 import { useState, useEffect } from 'react';
-import Pagination from './Pagination';
+import Pagination from '../UI/Pagination';
 
 export default function BlogGrid({ articles, pageNum, pagesCount }) {
   const [articlesTab, setArticlesTab] = useState('all');

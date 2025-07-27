@@ -46,7 +46,7 @@ export default function AwardsSection({ awardsData }) {
                 viewport={{ once: true, margin: "-100px 0px 0px 0px" }}
                 transition={{ delay: 0.1, duration: 0.4 }}
               >
-                <Image src={item.img} alt=" " />
+                <Image src={item.img} alt={item.name} />
               </motion.div>
             ))}
           </div>

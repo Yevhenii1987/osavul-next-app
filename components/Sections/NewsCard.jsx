@@ -5,8 +5,8 @@ export default function NewsCard({ classes = '', newsItem }) {
   return (
     <>
       <article className={"news-item " + classes}>
-        <Link href={`/blog/${newsItem.slug}`} className="image">
-          <Image src={newsItem.img} alt=" " />
+        <Link href={`/blog/${newsItem.slug}`} className="image" name={newsItem.title}>
+          <Image src={newsItem.img} alt={newsItem.title} />
         </Link>
         <div className="descr">
           <div className="descr-inner">

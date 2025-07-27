@@ -60,6 +60,7 @@ export default function SpeakersCarousel({ speakers }) {
           <ButtonArrow
             classes={`${isPrev && 'active'
               } slider-button slider-button--prev embla__prev`}
+            name="Previous slide button"
             onClick={scrollPrev}
           ></ButtonArrow>
           <div className="slides-num flex items-center justify-center">
@@ -70,6 +71,7 @@ export default function SpeakersCarousel({ speakers }) {
           <ButtonArrow
             classes={`${isNext && 'active'
               } slider-button slider-button--next embla__next`}
+            name="Next slide button"
             onClick={scrollNext}
           ></ButtonArrow>
         </div>

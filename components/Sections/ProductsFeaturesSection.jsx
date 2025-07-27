@@ -25,7 +25,7 @@ export default function ProductsFeaturesSection({ features }) {
               <div
                 className="products-item-img w-1/2 max-lg:w-2/5 max-md:w-full"
               >
-                <Image src={feature.image} alt=" " />
+                <Image src={feature.image} alt={feature.title} />
               </div>
               <div
                 className="products-item-descr flex flex-col w-1/2 max-lg:w-3/5 max-md:w-full"

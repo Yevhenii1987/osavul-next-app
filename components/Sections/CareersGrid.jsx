@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { getCareers } from '@/lib/http';
-import Pagination from './Pagination';
+import Pagination from '../UI/Pagination';
 
 export default function CareersGrid({ careers, pageNum, pagesCount }) {
   const [careersArr, setCareersArr] = useState(careers);
